@@ -1,0 +1,43 @@
+/* TODO: Remover todas as fontes, já que estamos usando google font */
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../../assets/fonts/Gilroy-ExtraBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../../assets/fonts/Gilroy-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../../assets/fonts/Gilroy-SemiBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../../assets/fonts/Gilroy-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../../assets/fonts/Gilroy-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../../assets/fonts/Gilroy-Light.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
