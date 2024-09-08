@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <div className="bg-background relative flex min-h-screen">
       <Sidebar />
-      <main className="grow">
+      <main className="grow px-10 py-4">
         <Outlet />
       </main>
     </div>

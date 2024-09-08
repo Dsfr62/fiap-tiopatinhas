@@ -1,25 +1,21 @@
 import { twMerge } from 'tailwind-merge'
 
-const Button = ({ children, type, onClick, variantStyle = 'primary', width, ...rest }) => {
-  const defaultStyle = 'px-4 py-1 rounded-[8px] font-bold ease-linear transition-all cursor-pointer'
+const Button = ({ children, type, onClick, variantStyle = 'primary', ...rest }) => {
+  const defaultStyle = 'p-4 rounded-2xl uppercase font-bold ease-linear transition-all cursor-pointer'
 
   const getVariantStyle = () => {
     switch (variantStyle) {
       case 'primary':
-        return 'bg-primary-default text-white hover:bg-opacity-80'
+        return 'bg-primary text-secondary hover:bg-opacity-90'
       case 'secondary':
-        return 'bg-secondary-default text-white hover:bg-opacity-80'
+        return 'bg-secondary text-white hover:bg-opacity-90'
       case 'tertiary':
-        return 'bg-white border-2 border-primary-default text-primary-default hover:bg-opacity-90'
+        return 'bg-secondary text-white hover:bg-primary hover:text-white'
     }
   }
 
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={twMerge(`${defaultStyle} ${getVariantStyle()} ${width}`, rest.className)}
-    >
+    <button type={type} onClick={onClick} className={twMerge(`${defaultStyle} ${getVariantStyle()}`, rest.className)}>
       {children}
     </button>
   )
