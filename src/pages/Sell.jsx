@@ -1,7 +1,7 @@
 const SellPage = () => {
   return (
     <div>
-      <h1>Vender</h1>
+      <h1 className="text-[48px] font-extrabold">Vender</h1>
     </div>
   )
 }
