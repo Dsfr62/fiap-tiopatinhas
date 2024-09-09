@@ -1,7 +1,7 @@
-import { useCart } from "../../../hooks/useCart"
-import { assets } from "../../../data/assets"
-import { Bitcoin, Building, Gem, ReceiptText } from "lucide-react"
-import { formatCurrency, formatDateTime } from "../../../js/format"
+import { useCart } from '../../../hooks/useCart'
+import { assets } from '../../../data/assets'
+import { Bitcoin, Building, Gem, ReceiptText } from 'lucide-react'
+import { formatCurrency, formatDateTime } from '../../../js/format'
 
 const TypeToIcon = {
   gem: Gem,
@@ -22,32 +22,33 @@ export const Assets = () => {
   }
 
   return (
-    <div className="max-h-[750px] overflow-y-auto flex flex-col gap-4 mt-4">
+    <div className="mt-4 flex max-h-[750px] flex-col gap-4 overflow-y-auto">
       {assets.map((asset) => {
         const Icon = TypeToIcon[asset.type]
 
         return (
-          <div className="flex bg-gray-dark px-6 py-4 rounded justify-between items-center">
-            <div className="flex gap-8 items-center">
-              <div className="rounded-lg p-3 bg-secondary text-white">
-                <Icon strokeWidth={1.5}/>
+          <div className="flex flex-wrap items-center justify-between gap-4 rounded bg-gray-dark px-6 py-4 lg:gap-0">
+            <div className="flex items-center gap-8">
+              <div className="rounded-lg bg-secondary p-3 text-white">
+                <Icon strokeWidth={1.5} />
               </div>
               <div className="flex flex-col">
-                <h3 className="font-medium text-lg">{asset.name}</h3>
+                <h3 className="text-lg font-medium">{asset.name}</h3>
                 <span className="text-xs text-stone-700">{formatDateTime(asset.createdAt)}</span>
               </div>
             </div>
             <div>
-              <span className="font-bold text-lg mr-8">
-                {formatCurrency(asset.price)}
-              </span>
-              <button onClick={() => handleAdd(asset)} className="bg-primary text-white px-4 py-2 rounded mr-2">Adicionar</button>
-              <button onClick={() => handleRemove(asset)} className="bg-secondary text-white px-4 py-2 rounded">Remover</button>
+              <span className="mr-8 text-lg font-bold">{formatCurrency(asset.price)}</span>
+              <button onClick={() => handleAdd(asset)} className="mr-2 rounded bg-primary px-4 py-2 text-white">
+                Adicionar
+              </button>
+              <button onClick={() => handleRemove(asset)} className="rounded bg-secondary px-4 py-2 text-white">
+                Remover
+              </button>
             </div>
           </div>
-          )
+        )
       })}
     </div>
   )
-  
 }

@@ -1,6 +1,6 @@
 import { assets } from '../data/assets'
 import { Bitcoin, Building, Gem, ReceiptText } from 'lucide-react'
-import { formatCurrency, formatDateTime } from '../js/format'
+import { formatDateTime } from '../js/format'
 
 const TypeToIcon = {
   gem: Gem,
@@ -11,7 +11,7 @@ const TypeToIcon = {
 
 const HistoryPage = () => {
   return (
-    <div className="container">
+    <div className="w-full md:container">
       <h1 className="text-[48px] font-extrabold">Histórico</h1>
       <div className="mt-8 flex flex-col gap-4">
         {assets.map((asset) => {

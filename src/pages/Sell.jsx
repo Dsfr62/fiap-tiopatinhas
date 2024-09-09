@@ -19,14 +19,17 @@ const SellPage = () => {
   }
 
   return (
-    <div className="container flex min-h-[90vh] flex-col">
+    <div className="flex min-h-[90vh] w-full flex-col md:container">
       <h1 className="text-[48px] font-extrabold">Vender</h1>
       <>
         <div className="mt-8 flex flex-col gap-4">
           {data.map((asset) => {
             const Icon = TypeToIcon[asset.type]
             return (
-              <div key={asset.id} className="flex items-center justify-between rounded bg-gray-dark px-6 py-4">
+              <div
+                key={asset.id}
+                className="flex flex-wrap items-center justify-between gap-4 rounded bg-gray-dark px-6 py-4 md:gap-0"
+              >
                 <div className="flex items-center gap-8">
                   <div className="rounded-lg bg-secondary p-3 text-white">
                     <Icon strokeWidth={1.5} />
