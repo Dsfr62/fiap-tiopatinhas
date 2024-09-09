@@ -5,9 +5,9 @@ import { CartProvider } from '../contexts/CartContext'
 const Layout = () => {
   return (
     <CartProvider>
-      <div className="bg-background relative flex min-h-screen">
+      <div className="flex h-screen bg-background">
         <Sidebar />
-        <main className="grow px-10 py-4">
+        <main className="h-auto grow overflow-auto px-10 py-4">
           <Outlet />
         </main>
       </div>
